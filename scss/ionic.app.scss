@@ -15,9 +15,13 @@ $royal:                           #8a6de9 !default;
 $dark:                            #444 !default;
 */
 
+$color-compass: #fb435f;
+$color-compass-grey: #cdd1d3;
+
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+@import "drops.scss";
 @import "compass.scss";

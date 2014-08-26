@@ -60,6 +60,7 @@ angular.module('starter.controllers', [])
         // set drops to view
         promise.then(function (data) {
             markers = data.markers;
+            $scope.name = data.name;
 
             // init local storage
             if (localStorage.getItem("lastMarker") === null) {
@@ -107,6 +108,7 @@ angular.module('starter.controllers', [])
             var totalDistance = 0;
             var percentDistance = 0;
             var amountMarkers = markers.length;
+            var nextMarker = "";
             currentLat = position.coords.latitude;
             currentLng = position.coords.longitude;
 
@@ -120,6 +122,7 @@ angular.module('starter.controllers', [])
 
                 nextLat = markers[0].lat;
                 nextLng = markers[0].lng;
+                nextMarker =  markers[0].name;
 
                 totalDistance = roundDistance(getDistanceFromLatLonInKm(firstLat, firstLng, nextLat, nextLng));
             }
@@ -128,6 +131,7 @@ angular.module('starter.controllers', [])
                 nextLng = markers[lastmarker].lng;
                 prevLat = markers[lastmarker-1].lat;
                 prevLng = markers[lastmarker-1].lng;
+                nextMarker =  markers[lastmarker].name;
 
                 totalDistance = roundDistance(getDistanceFromLatLonInKm(prevLat, prevLng, nextLat, nextLng));
             }
@@ -136,8 +140,8 @@ angular.module('starter.controllers', [])
             distance = roundDistance(getDistanceFromLatLonInKm(currentLat, currentLng, nextLat, nextLng));
             percentDistance = 100-(100*distance/totalDistance);
 
-            //$('.drop-info').html('<p>Please go to marker: ' + markers[0].name + '</p>');
             $scope.$apply(function () {
+                $scope.marker = nextMarker;
                 $scope.distance = distance + '<span>km</span>';
                 $scope.percent = percentDistance;
                 if(percentDistance < 5) $scope.classPercent = "per0";

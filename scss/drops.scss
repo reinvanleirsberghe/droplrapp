@@ -1,0 +1,12 @@
+/** DROP **/
+.drop{
+  .list{
+    .item{
+      p{
+        overflow: visible;
+        text-overflow: clip;
+        white-space: normal;
+      }
+    }
+  }
+}

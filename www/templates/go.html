@@ -1,6 +1,12 @@
-<ion-view title="Go">
-    <ion-content class="has-header padding">
-        <div class="drop-info"></div>
+<ion-view title="{{name}}">
+    <ion-content class="has-header padding compass">
+
+        <h4>
+            <i class="icon ion-navigate"></i>
+            <span ng-bind="marker"></span>
+        </h4>
+
+        <!--<div ng-bind="percent">0</div>-->
 
         <div class="drop-compass-wrap">
             <div id="drop-compass" width="200" height="200" ng-style="compass">
@@ -15,9 +21,6 @@
                 </div>
             </div>
         </div>
-
-        <div ng-bind="degrees">0</div>
-        <div ng-bind="percent">0</div>
 
     </ion-content>
 </ion-view>

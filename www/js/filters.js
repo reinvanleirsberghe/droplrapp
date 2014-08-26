@@ -9,6 +9,6 @@ angular.module('starter.filters', [])
 
         if (!data) return data;
         return (data + '')
-            .replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
+            .replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, breakTag);
     };
 });
