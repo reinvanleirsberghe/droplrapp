@@ -1,0 +1,14 @@
+<ion-view title="Drops">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ion-list>
+      <ion-item ng-repeat="drop in drops" class="item item-avatar" href="#/app/drops/{{drop.id}}">
+          <img src="venkman.jpg">
+          <h2>{{drop.name}}</h2>
+          <p>16km</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

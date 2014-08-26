@@ -1,0 +1,18 @@
+<ion-view title="Go">
+    <ion-content class="has-header padding">
+        <div class="drop-info"></div>
+
+        <div id="drop-compass">&middot;</div>
+
+        <div class='drop-progress per75'>
+            <span class='progress-val' ng-bind-html="distance"></span>
+            <div class='pie'>
+                <div class='first'></div>
+                <div class='last'></div>
+            </div>
+        </div>
+
+        <div ng-bind="degrees">0</div>
+
+    </ion-content>
+</ion-view>

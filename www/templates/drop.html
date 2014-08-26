@@ -1,0 +1,9 @@
+<ion-view title="{{drop.name}}">
+  <ion-content class="has-header padding">
+    <h1>{{drop.name}}</h1>
+      <p ng-bind-html="drop.description | nl2br"></p>
+      <a class="button button-block button-positive" href="#/app/go/{{drop.id}}">
+          Take the drop
+      </a>
+  </ion-content>
+</ion-view>
