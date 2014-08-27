@@ -75,9 +75,9 @@ angular.module('starter.controllers', [])
                 navigator.geolocation.getCurrentPosition(onSuccessGeo, onErrorGeo);
             }, 3000);
 
-            // check orientation
+//            // check orientation
             var optionsCompass = {
-                frequency: 1
+                frequency: 500
             };
             navigator.compass.watchHeading(onSuccessCompass, onErrorCompass, optionsCompass);
 
@@ -92,7 +92,7 @@ angular.module('starter.controllers', [])
 //                    'transform':'rotate(-' + degrees + 'deg)'
 //                    };
 //                });
-//            }, 1000);
+//            }, 500);
 
             $ionicLoading.hide();
         });

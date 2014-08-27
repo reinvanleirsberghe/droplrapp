@@ -1,83 +1,10 @@
-// main functions
+//// main functions
 /**
- * Search the CSSOM for a specific -webkit-keyframe rule
- *
- * @param rule
- * @returns {*}
- */
-function findKeyframesRule(rule)
-{
-    // gather all stylesheets into an array
-    var ss = document.styleSheets;
-
-    // loop through the stylesheets
-    for (var i = 0; i < ss.length; ++i) {
-
-        // loop through all the rules
-        for (var j = 0; j < ss[i].cssRules.length; ++j) {
-
-            // find the -webkit-keyframe rule whose name matches our passed over parameter and return that rule
-            if (ss[i].cssRules[j].type == window.CSSRule.WEBKIT_KEYFRAMES_RULE && ss[i].cssRules[j].name == rule)
-                return ss[i].cssRules[j];
-        }
-    }
-
-    // rule not found
-    return null;
-}
-
-/**
- * remove old keyframes and add new ones
- *
- * @param anim
- * @param degrees
- */
-function changeAnim(anim, degrees)
-{
-    // find our -webkit-keyframe rule
-    var keyframes = findKeyframesRule(anim);
-
-    // remove the existing from and to rules
-    keyframes.deleteRule("from");
-    keyframes.deleteRule("to");
-
-    // init local storage
-    if (localStorage.getItem("lastPosition") === null) {
-        localStorage.setItem("lastPosition", 90);
-    }
-
-    var lastPosition = localStorage.getItem("lastPosition");
-
-    // create new from and to rules with random numbers
-    keyframes.insertRule("from { -webkit-transform: rotate(" + lastPosition + "deg) translate(-95px) rotate(-" + lastPosition + "deg); }");
-    keyframes.insertRule("to { -webkit-transform: rotate(" + degrees + "deg) translate(-95px) rotate(-" + degrees + "deg); }");
-
-    localStorage.setItem("lastPosition", degrees);
-
-    // assign the animation to our element (which will cause the animation to run)
-    document.getElementById('drop-compass').style.webkitAnimationName = anim;
-}
-
-/**
- * Change Compass
- *
- * @param degrees
- */
-function changeCompass(degrees)
-{
-    // remove the old animation from our object
-    document.getElementById('drop-compass').style.webkitAnimationName = "none";
-
-    // call the change method, which will update the keyframe animation
-    setTimeout(function(){changeAnim("rot", degrees);}, 0);
-}
-
-/**
- *
- * @param from
- * @param to
- * @returns {number}
- */
+*
+* @param from
+* @param to
+* @returns {number}
+*/
 function randomFromTo(from, to){
     return Math.floor(Math.random() * (to - from + 1) + from);
 }

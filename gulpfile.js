@@ -4,6 +4,7 @@ var bower = require('bower');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
+var autoprefixer = require('gulp-autoprefixer');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
 
@@ -16,6 +17,7 @@ gulp.task('default', ['sass']);
 gulp.task('sass', function(done) {
   gulp.src('./scss/ionic.app.scss')
     .pipe(sass())
+    .pipe(autoprefixer('last 10 version'))
     .pipe(gulp.dest('./www/css/'))
     .pipe(minifyCss({
       keepSpecialComments: 0

@@ -7653,358 +7653,309 @@ a.button {
   -webkit-transition: none !important;
   transition: none !important; }
 
+/** DROP **/
+.drop .list .item p {
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal; }
+
 /** DROP COMPASS **/
-@-webkit-keyframes rot {
-  from {
-    -webkit-transform: rotate(90deg) translate(-95px) rotate(-90deg); }
-
-  to {
-    -webkit-transform: rotate(90deg) translate(-95px) rotate(-90deg); } }
-
-#drop-compass {
-  width: 1px;
-  height: 1px;
-  top: 123px;
-  right: 10px;
-  margin: auto;
-  display: block;
-  position: relative;
-  font-size: 70px;
-  color: #fb435f;
-  -webkit-animation: rot 1s 1 linear forwards;
-  animation: rot 1s 1 linear forwards; }
-
-/** DROP PROGRESS **/
-.drop-progress {
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  position: relative;
-  width: 170px;
-  height: 170px; }
-
-.drop-progress:after {
-  content: "";
-  position: absolute;
-  background: #FFF;
-  left: 7%;
-  right: 7%;
-  bottom: 7%;
-  top: 7%;
-  z-index: 1;
-  border-radius: 100%; }
-
-.drop-progress:before {
-  content: "";
-  position: absolute;
-  background: #cdd1d3;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  z-index: 0;
-  border-radius: 100%; }
-
-.progress-val {
-  position: absolute;
-  color: #fb435f;
-  font-size: 50px;
-  z-index: 2;
-  width: 100%;
-  top: 65px;
-  bottom: 0;
-  left: 0;
-  text-align: center; }
-  .progress-val span {
+.compass {
+  /** DROP PROGRESS **/ }
+  .compass h4 {
+    margin: auto;
+    text-align: center;
     display: block;
-    font-size: 25px;
-    color: #cdd1d3;
-    margin-top: 15px; }
-
-.pie {
-  position: absolute;
-  top: 50%;
-  margin-top: -85px;
-  left: 50%;
-  margin-left: -85px;
-  width: 170px;
-  height: 170px;
-  overflow: hidden; }
-
-.first, .last {
-  width: 85px;
-  height: 170px;
-  background: #fb435f; }
-
-.first {
-  border-top-left-radius: 85px;
-  border-bottom-left-radius: 85px;
-  -moz-transform-origin: 100% 50%;
-  -ms-transform-origin: 100% 50%;
-  -webkit-transform-origin: 100% 50%;
-  transform-origin: 100% 50%;
-  position: absolute; }
-
-.last {
-  border-top-right-radius: 85px;
-  border-bottom-right-radius: 85px;
-  -moz-transform-origin: 0% 50%;
-  -ms-transform-origin: 0% 50%;
-  -webkit-transform-origin: 0% 50%;
-  transform-origin: 0% 50%;
-  margin-left: 85px;
-  position: relative;
-  z-index: 1;
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg); }
-
-.per0 .pie {
-  clip: rect(0, 170px, 170px, 85px); }
-
-.per0 .first {
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg); }
-
-.per5 .pie {
-  clip: rect(0, 170px, 170px, 85px); }
-
-.per5 .first {
-  -moz-transform: rotate(18deg);
-  -ms-transform: rotate(18deg);
-  -webkit-transform: rotate(18deg);
-  transform: rotate(18deg); }
-
-.per10 .pie {
-  clip: rect(0, 170px, 170px, 85px); }
-
-.per10 .first {
-  -moz-transform: rotate(36deg);
-  -ms-transform: rotate(36deg);
-  -webkit-transform: rotate(36deg);
-  transform: rotate(36deg); }
-
-.per15 .pie {
-  clip: rect(0, 170px, 170px, 85px); }
-
-.per15 .first {
-  -moz-transform: rotate(54deg);
-  -ms-transform: rotate(54deg);
-  -webkit-transform: rotate(54deg);
-  transform: rotate(54deg); }
-
-.per20 .pie {
-  clip: rect(0, 170px, 170px, 85px); }
-
-.per20 .first {
-  -moz-transform: rotate(72deg);
-  -ms-transform: rotate(72deg);
-  -webkit-transform: rotate(72deg);
-  transform: rotate(72deg); }
-
-.per25 .pie {
-  clip: rect(0, 170px, 170px, 85px); }
-
-.per25 .first {
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg); }
-
-.per30 .pie {
-  clip: rect(0, 170px, 170px, 85px); }
-
-.per30 .first {
-  -moz-transform: rotate(108deg);
-  -ms-transform: rotate(108deg);
-  -webkit-transform: rotate(108deg);
-  transform: rotate(108deg); }
-
-.per35 .pie {
-  clip: rect(0, 170px, 170px, 85px); }
-
-.per35 .first {
-  -moz-transform: rotate(126deg);
-  -ms-transform: rotate(126deg);
-  -webkit-transform: rotate(126deg);
-  transform: rotate(126deg); }
-
-.per40 .pie {
-  clip: rect(0, 170px, 170px, 85px); }
-
-.per40 .first {
-  -moz-transform: rotate(144deg);
-  -ms-transform: rotate(144deg);
-  -webkit-transform: rotate(144deg);
-  transform: rotate(144deg); }
-
-.per45 .pie {
-  clip: rect(0, 170px, 170px, 85px); }
-
-.per45 .first {
-  -moz-transform: rotate(162deg);
-  -ms-transform: rotate(162deg);
-  -webkit-transform: rotate(162deg);
-  transform: rotate(162deg); }
-
-.per50 .pie {
-  clip: rect(0, 170px, 170px, 85px); }
-
-.per50 .first {
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg); }
-
-.per55 .pie {
-  clip: rect(0, 170px, 170px, 0px); }
-
-.per55 .first {
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg); }
-
-.per55 .last {
-  -moz-transform: rotate(18deg);
-  -ms-transform: rotate(18deg);
-  -webkit-transform: rotate(18deg);
-  transform: rotate(18deg); }
-
-.per60 .pie {
-  clip: rect(0, 170px, 170px, 0px); }
-
-.per60 .first {
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg); }
-
-.per60 .last {
-  -moz-transform: rotate(36deg);
-  -ms-transform: rotate(36deg);
-  -webkit-transform: rotate(36deg);
-  transform: rotate(36deg); }
-
-.per65 .pie {
-  clip: rect(0, 170px, 170px, 0px); }
-
-.per65 .first {
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg); }
-
-.per65 .last {
-  -moz-transform: rotate(54deg);
-  -ms-transform: rotate(54deg);
-  -webkit-transform: rotate(54deg);
-  transform: rotate(54deg); }
-
-.per70 .pie {
-  clip: rect(0, 170px, 170px, 0px); }
-
-.per70 .first {
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg); }
-
-.per70 .last {
-  -moz-transform: rotate(72deg);
-  -ms-transform: rotate(72deg);
-  -webkit-transform: rotate(72deg);
-  transform: rotate(72deg); }
-
-.per75 .pie {
-  clip: rect(0, 170px, 170px, 0px); }
-
-.per75 .first {
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg); }
-
-.per75 .last {
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg); }
-
-.per80 .pie {
-  clip: rect(0, 170px, 170px, 0px); }
-
-.per80 .first {
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg); }
-
-.per80 .last {
-  -moz-transform: rotate(108deg);
-  -ms-transform: rotate(108deg);
-  -webkit-transform: rotate(108deg);
-  transform: rotate(108deg); }
-
-.per85 .pie {
-  clip: rect(0, 170px, 170px, 0px); }
-
-.per85 .first {
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg); }
-
-.per85 .last {
-  -moz-transform: rotate(126deg);
-  -ms-transform: rotate(126deg);
-  -webkit-transform: rotate(126deg);
-  transform: rotate(126deg); }
-
-.per90 .pie {
-  clip: rect(0, 170px, 170px, 0px); }
-
-.per90 .first {
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg); }
-
-.per90 .last {
-  -moz-transform: rotate(144deg);
-  -ms-transform: rotate(144deg);
-  -webkit-transform: rotate(144deg);
-  transform: rotate(144deg); }
-
-.per95 .pie {
-  clip: rect(0, 170px, 170px, 0px); }
-
-.per95 .first {
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg); }
-
-.per95 .last {
-  -moz-transform: rotate(162deg);
-  -ms-transform: rotate(162deg);
-  -webkit-transform: rotate(162deg);
-  transform: rotate(162deg); }
-
-.per100 .pie {
-  clip: rect(0, 170px, 170px, 0px); }
-
-.per100 .first {
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg); }
-
-.per100 .last {
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg); }
+    margin-top: 15px;
+    margin-bottom: 25px; }
+    .compass h4 i {
+      color: #cdd1d3;
+      font-size: 30px; }
+    .compass h4 span {
+      display: block;
+      color: #fb435f; }
+  .compass #drop-compass {
+    margin: auto;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: block; }
+    .compass #drop-compass .arrow {
+      float: right;
+      margin-top: 45%;
+      color: #fb435f; }
+  .compass .drop-progress {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+    width: 170px;
+    height: 170px;
+    margin-top: -185px; }
+  .compass .drop-progress:after {
+    content: "";
+    position: absolute;
+    background: #FFF;
+    left: 7%;
+    right: 7%;
+    bottom: 7%;
+    top: 7%;
+    z-index: 1;
+    border-radius: 100%; }
+  .compass .drop-progress:before {
+    content: "";
+    position: absolute;
+    background: #cdd1d3;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 0;
+    border-radius: 100%; }
+  .compass .progress-val {
+    position: absolute;
+    color: #fb435f;
+    font-size: 50px;
+    z-index: 2;
+    width: 100%;
+    top: 65px;
+    bottom: 0;
+    left: 0;
+    text-align: center; }
+    .compass .progress-val span {
+      display: block;
+      font-size: 25px;
+      color: #cdd1d3;
+      margin-top: 15px; }
+  .compass .pie {
+    position: absolute;
+    top: 50%;
+    margin-top: -85px;
+    left: 50%;
+    margin-left: -85px;
+    width: 170px;
+    height: 170px;
+    overflow: hidden; }
+  .compass .first, .compass .last {
+    width: 85px;
+    height: 170px;
+    background: #fb435f; }
+  .compass .first {
+    border-top-left-radius: 85px;
+    border-bottom-left-radius: 85px;
+    -moz-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    position: absolute; }
+  .compass .last {
+    border-top-right-radius: 85px;
+    border-bottom-right-radius: 85px;
+    -moz-transform-origin: 0% 50%;
+    -ms-transform-origin: 0% 50%;
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    margin-left: 85px;
+    position: relative;
+    z-index: 1;
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .compass .per0 .pie {
+    clip: rect(0, 170px, 170px, 85px); }
+  .compass .per0 .first {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  .compass .per5 .pie {
+    clip: rect(0, 170px, 170px, 85px); }
+  .compass .per5 .first {
+    -moz-transform: rotate(18deg);
+    -ms-transform: rotate(18deg);
+    -webkit-transform: rotate(18deg);
+    transform: rotate(18deg); }
+  .compass .per10 .pie {
+    clip: rect(0, 170px, 170px, 85px); }
+  .compass .per10 .first {
+    -moz-transform: rotate(36deg);
+    -ms-transform: rotate(36deg);
+    -webkit-transform: rotate(36deg);
+    transform: rotate(36deg); }
+  .compass .per15 .pie {
+    clip: rect(0, 170px, 170px, 85px); }
+  .compass .per15 .first {
+    -moz-transform: rotate(54deg);
+    -ms-transform: rotate(54deg);
+    -webkit-transform: rotate(54deg);
+    transform: rotate(54deg); }
+  .compass .per20 .pie {
+    clip: rect(0, 170px, 170px, 85px); }
+  .compass .per20 .first {
+    -moz-transform: rotate(72deg);
+    -ms-transform: rotate(72deg);
+    -webkit-transform: rotate(72deg);
+    transform: rotate(72deg); }
+  .compass .per25 .pie {
+    clip: rect(0, 170px, 170px, 85px); }
+  .compass .per25 .first {
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .compass .per30 .pie {
+    clip: rect(0, 170px, 170px, 85px); }
+  .compass .per30 .first {
+    -moz-transform: rotate(108deg);
+    -ms-transform: rotate(108deg);
+    -webkit-transform: rotate(108deg);
+    transform: rotate(108deg); }
+  .compass .per35 .pie {
+    clip: rect(0, 170px, 170px, 85px); }
+  .compass .per35 .first {
+    -moz-transform: rotate(126deg);
+    -ms-transform: rotate(126deg);
+    -webkit-transform: rotate(126deg);
+    transform: rotate(126deg); }
+  .compass .per40 .pie {
+    clip: rect(0, 170px, 170px, 85px); }
+  .compass .per40 .first {
+    -moz-transform: rotate(144deg);
+    -ms-transform: rotate(144deg);
+    -webkit-transform: rotate(144deg);
+    transform: rotate(144deg); }
+  .compass .per45 .pie {
+    clip: rect(0, 170px, 170px, 85px); }
+  .compass .per45 .first {
+    -moz-transform: rotate(162deg);
+    -ms-transform: rotate(162deg);
+    -webkit-transform: rotate(162deg);
+    transform: rotate(162deg); }
+  .compass .per50 .pie {
+    clip: rect(0, 170px, 170px, 85px); }
+  .compass .per50 .first {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .compass .per55 .pie {
+    clip: rect(0, 170px, 170px, 0px); }
+  .compass .per55 .first {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .compass .per55 .last {
+    -moz-transform: rotate(18deg);
+    -ms-transform: rotate(18deg);
+    -webkit-transform: rotate(18deg);
+    transform: rotate(18deg); }
+  .compass .per60 .pie {
+    clip: rect(0, 170px, 170px, 0px); }
+  .compass .per60 .first {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .compass .per60 .last {
+    -moz-transform: rotate(36deg);
+    -ms-transform: rotate(36deg);
+    -webkit-transform: rotate(36deg);
+    transform: rotate(36deg); }
+  .compass .per65 .pie {
+    clip: rect(0, 170px, 170px, 0px); }
+  .compass .per65 .first {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .compass .per65 .last {
+    -moz-transform: rotate(54deg);
+    -ms-transform: rotate(54deg);
+    -webkit-transform: rotate(54deg);
+    transform: rotate(54deg); }
+  .compass .per70 .pie {
+    clip: rect(0, 170px, 170px, 0px); }
+  .compass .per70 .first {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .compass .per70 .last {
+    -moz-transform: rotate(72deg);
+    -ms-transform: rotate(72deg);
+    -webkit-transform: rotate(72deg);
+    transform: rotate(72deg); }
+  .compass .per75 .pie {
+    clip: rect(0, 170px, 170px, 0px); }
+  .compass .per75 .first {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .compass .per75 .last {
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .compass .per80 .pie {
+    clip: rect(0, 170px, 170px, 0px); }
+  .compass .per80 .first {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .compass .per80 .last {
+    -moz-transform: rotate(108deg);
+    -ms-transform: rotate(108deg);
+    -webkit-transform: rotate(108deg);
+    transform: rotate(108deg); }
+  .compass .per85 .pie {
+    clip: rect(0, 170px, 170px, 0px); }
+  .compass .per85 .first {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .compass .per85 .last {
+    -moz-transform: rotate(126deg);
+    -ms-transform: rotate(126deg);
+    -webkit-transform: rotate(126deg);
+    transform: rotate(126deg); }
+  .compass .per90 .pie {
+    clip: rect(0, 170px, 170px, 0px); }
+  .compass .per90 .first {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .compass .per90 .last {
+    -moz-transform: rotate(144deg);
+    -ms-transform: rotate(144deg);
+    -webkit-transform: rotate(144deg);
+    transform: rotate(144deg); }
+  .compass .per95 .pie {
+    clip: rect(0, 170px, 170px, 0px); }
+  .compass .per95 .first {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .compass .per95 .last {
+    -moz-transform: rotate(162deg);
+    -ms-transform: rotate(162deg);
+    -webkit-transform: rotate(162deg);
+    transform: rotate(162deg); }
+  .compass .per100 .pie {
+    clip: rect(0, 170px, 170px, 0px); }
+  .compass .per100 .first {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .compass .per100 .last {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }

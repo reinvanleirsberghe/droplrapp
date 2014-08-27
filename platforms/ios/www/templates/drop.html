@@ -1,9 +1,21 @@
-<ion-view title="{{drop.name}}">
-  <ion-content class="has-header padding">
-    <h1>{{drop.name}}</h1>
-      <p ng-bind-html="drop.description | nl2br"></p>
-      <a class="button button-block button-positive" href="#/app/go/{{drop.id}}">
-          Take the drop
-      </a>
+<ion-view title="Drops">
+  <ion-content class="has-header padding drop">
+      <div class="list">
+
+          <div class="item">
+              <h2>{{drop.name}}</h2>
+              <p ng-bind-html="drop.description | nl2br"></p>
+          </div>
+
+          <div class="item item-image">
+              <img src="http://www.placehold.it/100/100">
+          </div>
+
+          <a class="item item-icon-left assertive" href="#/app/go/{{drop.id}}">
+              <i class="icon ion-location"></i>
+              Take the drop
+          </a>
+
+      </div>
   </ion-content>
 </ion-view>

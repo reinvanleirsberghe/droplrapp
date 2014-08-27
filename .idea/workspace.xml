@@ -22,21 +22,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
+      <file leaf-file-name="go.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/templates/go.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="63" selection-start="2690" selection-end="2690" vertical-scroll-proportion="0.70238096" vertical-offset="657" max-vertical-offset="3660">
-              <folding>
-                <marker date="1409140339000" expanded="true" signature="2044:2126" placeholder="..." />
-              </folding>
+            <state line="26" column="11" selection-start="843" selection-end="843" vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="480">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="go.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/templates/go.html">
+      <file leaf-file-name="gulpfile.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="35" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+            <state line="11" column="28" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="compass.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/compass.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="30" selection-start="436" selection-end="436" vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="6570">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="84" column="21" selection-start="2263" selection-end="2763" vertical-scroll-proportion="0.60144925" vertical-offset="762" max-vertical-offset="3660">
               <folding />
             </state>
           </provider>
@@ -64,18 +80,19 @@
         <option value="$PROJECT_DIR$/www/templates/drop.html" />
         <option value="$PROJECT_DIR$/www/js/filters.js" />
         <option value="$PROJECT_DIR$/scss/ionic.app.scss" />
-        <option value="$PROJECT_DIR$/scss/compass.scss" />
         <option value="$PROJECT_DIR$/www/templates/go.html" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/scss/compass.scss" />
         <option value="$PROJECT_DIR$/www/js/controllers.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1280" />
+    <option name="x" value="1680" />
     <option name="y" value="22" />
-    <option name="width" value="1920" />
-    <option name="height" value="1058" />
+    <option name="width" value="1600" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -103,27 +120,105 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="droplrapp2" />
+              <option name="myItemId" value="droplrapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="droplrapp2" />
+              <option name="myItemId" value="droplrapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="droplrapp2" />
+              <option name="myItemId" value="droplrapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="droplrapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="droplrapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="droplrapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="droplrapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="droplrapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="droplrapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="droplrapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="droplrapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="droplrapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="droplrapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -167,7 +262,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="22" width="1920" height="1058" extended-state="6" />
+    <frame x="1680" y="22" width="1600" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -176,7 +271,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.134375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.140625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.315625" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -229,28 +324,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="6" selection-start="1624" selection-end="1624" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1215" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="723" selection-end="723" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="495" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/drop.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="302" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/go.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="11" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="165">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/filters.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="3" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="285" />
@@ -273,11 +346,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="780">
-          <folding>
-            <marker date="1409140339000" expanded="true" signature="2044:2126" placeholder="..." />
-          </folding>
-        </state>
+        <state line="44" column="0" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="780" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/menu.html">
@@ -317,11 +386,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
-          <folding>
-            <marker date="1409140339000" expanded="true" signature="2044:2126" placeholder="..." />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/menu.html">
@@ -361,11 +426,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
-          <folding>
-            <marker date="1409140339000" expanded="true" signature="2044:2126" placeholder="..." />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/menu.html">
@@ -405,11 +466,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
-          <folding>
-            <marker date="1409140339000" expanded="true" signature="2044:2126" placeholder="..." />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/menu.html">
@@ -472,19 +529,9 @@
         <state line="5" column="24" selection-start="89" selection-end="89" vertical-scroll-proportion="0.07440476" vertical-offset="0" max-vertical-offset="1008" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/compass.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="22" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0922619" vertical-offset="72" max-vertical-offset="6555" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/ionic.app.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="0" selection-start="659" selection-end="678" vertical-scroll-proportion="0.26785713" vertical-offset="0" max-vertical-offset="1008" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="58" selection-start="887" selection-end="887" vertical-scroll-proportion="0.74127907" vertical-offset="0" max-vertical-offset="840" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
@@ -492,19 +539,53 @@
         <state line="44" column="56" selection-start="2538" selection-end="2538" vertical-scroll-proportion="0.8622222" vertical-offset="78" max-vertical-offset="1425" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic.project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="917" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="21" selection-start="23" selection-end="23" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="180" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="917">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/go.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="35" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+        <state line="26" column="11" selection-start="843" selection-end="843" vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="480">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="28" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/compass.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="30" selection-start="436" selection-end="436" vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="6570">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="63" selection-start="2690" selection-end="2690" vertical-scroll-proportion="0.70238096" vertical-offset="657" max-vertical-offset="3660">
-          <folding>
-            <marker date="1409140339000" expanded="true" signature="2044:2126" placeholder="..." />
-          </folding>
+        <state line="84" column="21" selection-start="2263" selection-end="2763" vertical-scroll-proportion="0.60144925" vertical-offset="762" max-vertical-offset="3660">
+          <folding />
         </state>
       </provider>
     </entry>

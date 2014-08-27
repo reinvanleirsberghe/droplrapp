@@ -1,18 +1,27 @@
-<ion-view title="Go">
-    <ion-content class="has-header padding">
-        <div class="drop-info"></div>
+<ion-view title="{{name}}">
+    <ion-content class="has-header padding compass">
 
-        <div id="drop-compass">&middot;</div>
+        <h4>
+            <i class="icon ion-navigate"></i>
+            <span ng-bind="marker"></span>
+        </h4>
 
-        <div class='drop-progress per75'>
-            <span class='progress-val' ng-bind-html="distance"></span>
-            <div class='pie'>
-                <div class='first'></div>
-                <div class='last'></div>
+        <div ng-bind="percent">0</div>
+        <div ng-bind="totalDistance">0</div>
+
+        <div class="drop-compass-wrap">
+            <div id="drop-compass" width="200" height="200" ng-style="compass">
+                <span class="ion-chevron-right arrow"></span>
+            </div>
+
+            <div class='drop-progress per0' ng-class="classPercent">
+                <span class='progress-val' ng-bind-html="distance"></span>
+                <div class='pie'>
+                    <div class='first'></div>
+                    <div class='last'></div>
+                </div>
             </div>
         </div>
-
-        <div ng-bind="degrees">0</div>
 
     </ion-content>
 </ion-view>
