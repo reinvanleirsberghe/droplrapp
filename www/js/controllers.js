@@ -45,7 +45,10 @@ angular.module('starter.controllers', [])
         $scope.drop = {};
         $scope.distance = null;
         $scope.degrees = null;
+
         localStorage.removeItem("lastMarker");
+        localStorage.removeItem("firstLat");
+        localStorage.removeItem("firstLng");
 
         var markers = {};
 
@@ -73,24 +76,23 @@ angular.module('starter.controllers', [])
             }, 3000);
 
             // check orientation
-//            var optionsCompass = {
-//                frequency: 1
-//            };
-//            navigator.compass.watchHeading(onSuccessCompass, onErrorCompass, optionsCompass);
+            var optionsCompass = {
+                frequency: 1
+            };
+            navigator.compass.watchHeading(onSuccessCompass, onErrorCompass, optionsCompass);
 
             // simulate compass
-            setInterval(function () {
-                var degrees = randomFromTo(0 , 360);
-                $scope.$apply(function () {
-                    $scope.compass = {
-                    '-moz-transform':'rotate(-' + degrees + 'deg)',
-                    '-webkit-transform':'rotate(-' + degrees + 'deg)',
-                    '-o-transform':'rotate(-' + degrees + 'deg)',
-                    '-ms-transform':'rotate(-' + degrees + 'deg)',
-                    'transform':'rotate(-' + degrees + 'deg)'
-                    };
-                });
-            }, 1000);
+//            setInterval(function () {
+//                var degrees = randomFromTo(0 , 360);
+//                $scope.$apply(function () {
+//                    $scope.compass = {
+//                    '-moz-transform':'rotate(-' + degrees + 'deg)',
+//                    '-o-transform':'rotate(-' + degrees + 'deg)',
+//                    '-ms-transform':'rotate(-' + degrees + 'deg)',
+//                    'transform':'rotate(-' + degrees + 'deg)'
+//                    };
+//                });
+//            }, 1000);
 
             $ionicLoading.hide();
         });
@@ -101,7 +103,7 @@ angular.module('starter.controllers', [])
          * @param params
          */
         function onSuccessGeo(position) {
-            var lastmarker = localStorage.getItem("lastMarker");
+            var lastMarker = localStorage.getItem("lastMarker");
             var firstLat = localStorage.getItem("firstLat");
             var firstLng = localStorage.getItem("firstLng");
             var distance = 0;
@@ -113,12 +115,18 @@ angular.module('starter.controllers', [])
             currentLng = position.coords.longitude;
 
             // check if it's the first marker
-            if (lastmarker == -1 || lastmarker == 0) {
-                lastmarker = 0;
-                localStorage.setItem("lastMarker", lastmarker);
+            if (lastMarker == -1 || lastMarker == 0) {
+                lastMarker = 0;
+                localStorage.setItem("lastMarker", lastMarker);
 
-                if (localStorage.getItem("firstLat") === null) firstLat = currentLat;
-                if (localStorage.getItem("firstLng") === null) firstLng = currentLng;
+                if (localStorage.getItem("firstLat") === null) {
+                    firstLat = currentLat;
+                    localStorage.setItem("firstLat", firstLat);
+                }
+                if (localStorage.getItem("firstLng") === null) {
+                    firstLng = currentLng;
+                    localStorage.setItem("firstLng", firstLng);
+                }
 
                 nextLat = markers[0].lat;
                 nextLng = markers[0].lng;
@@ -127,11 +135,11 @@ angular.module('starter.controllers', [])
                 totalDistance = roundDistance(getDistanceFromLatLonInKm(firstLat, firstLng, nextLat, nextLng));
             }
             else {
-                nextLat = markers[lastmarker].lat;
-                nextLng = markers[lastmarker].lng;
-                prevLat = markers[lastmarker-1].lat;
-                prevLng = markers[lastmarker-1].lng;
-                nextMarker =  markers[lastmarker].name;
+                nextLat = markers[lastMarker].lat;
+                nextLng = markers[lastMarker].lng;
+                prevLat = markers[lastMarker-1].lat;
+                prevLng = markers[lastMarker-1].lng;
+                nextMarker =  markers[lastMarker].name;
 
                 totalDistance = roundDistance(getDistanceFromLatLonInKm(prevLat, prevLng, nextLat, nextLng));
             }
@@ -143,7 +151,7 @@ angular.module('starter.controllers', [])
             $scope.$apply(function () {
                 $scope.marker = nextMarker;
                 $scope.distance = distance + '<span>km</span>';
-                $scope.percent = percentDistance;
+
                 if(percentDistance < 5) $scope.classPercent = "per0";
                 else if(percentDistance < 10) $scope.classPercent = "per5";
                 else if(percentDistance < 15) $scope.classPercent = "per10";
@@ -167,10 +175,10 @@ angular.module('starter.controllers', [])
                 else if(percentDistance >= 100) $scope.classPercent = "per100";
             });
 
-            if (distance < 0.02) {
+            if (distance < 0.05) {
                 lastMarker++;
                 if (lastMarker <= amountMarkers) {
-                    localStorage.setItem("lastMarker", lastmarker);
+                    localStorage.setItem("lastMarker", lastMarker);
                 }
                 else {
                     alert('Your there mate! Good job!');
