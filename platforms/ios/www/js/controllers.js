@@ -44,6 +44,10 @@ angular.module('starter.controllers', [])
         promise.then(function (data) {
             $scope.drop = data;
 
+            localStorage.removeItem("lastMarker");
+            localStorage.removeItem("firstLat");
+            localStorage.removeItem("firstLng");
+
             $ionicLoading.hide();
         });
     })
@@ -55,10 +59,6 @@ angular.module('starter.controllers', [])
         $scope.drop = {};
         $scope.distance = null;
         $scope.degrees = null;
-
-        localStorage.removeItem("lastMarker");
-        localStorage.removeItem("firstLat");
-        localStorage.removeItem("firstLng");
 
         var markers = {};
 
