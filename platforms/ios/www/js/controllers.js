@@ -1,10 +1,14 @@
 angular.module('starter.controllers', [])
 
     .controller('AppCtrl', function ($scope, $ionicModal, $timeout) {
-
+        // allow device to sleep
+        window.plugins.powerManagement.release();
     })
 
     .controller('DropsCtrl', function ($scope, $ionicLoading, Drops) {
+        // allow device to sleep
+        window.plugins.powerManagement.release();
+
         $scope.drops = {};
 
         // show loading
@@ -23,6 +27,9 @@ angular.module('starter.controllers', [])
     })
 
     .controller('DropCtrl', function ($scope, $ionicLoading, $stateParams, Drops) {
+        // allow device to sleep
+        window.plugins.powerManagement.release();
+
         $scope.drop = {};
 
         // show loading
@@ -42,6 +49,9 @@ angular.module('starter.controllers', [])
     })
 
     .controller('GoCtrl', function ($scope, $ionicLoading, $stateParams, Drops) {
+        // prevent device from sleeping
+        window.plugins.powerManagement.acquire();
+
         $scope.drop = {};
         $scope.distance = null;
         $scope.degrees = null;
@@ -73,11 +83,11 @@ angular.module('starter.controllers', [])
             // check positions
             setInterval(function () {
                 navigator.geolocation.getCurrentPosition(onSuccessGeo, onErrorGeo);
-            }, 3000);
+            }, 1500);
 
-            // check orientation
+//            // check orientation
             var optionsCompass = {
-                frequency: 1
+                frequency: 200
             };
             navigator.compass.watchHeading(onSuccessCompass, onErrorCompass, optionsCompass);
 
@@ -92,7 +102,7 @@ angular.module('starter.controllers', [])
 //                    'transform':'rotate(-' + degrees + 'deg)'
 //                    };
 //                });
-//            }, 1000);
+//            }, 500);
 
             $ionicLoading.hide();
         });
@@ -177,7 +187,7 @@ angular.module('starter.controllers', [])
 
             if (distance < 0.05) {
                 lastMarker++;
-                if (lastMarker <= amountMarkers) {
+                if (lastMarker < amountMarkers) {
                     localStorage.setItem("lastMarker", lastMarker);
                 }
                 else {

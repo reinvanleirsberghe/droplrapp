@@ -7520,8 +7520,8 @@ a.button {
     width: 200px;
     height: 200px;
     display: block;
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s; }
+    -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s; }
     .compass #drop-compass .arrow {
       float: right;
       margin-top: 45%;

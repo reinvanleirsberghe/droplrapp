@@ -8,6 +8,13 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/com.simplec.plugins.powermanagement/www/PowerManagement.js",
+        "id": "com.simplec.plugins.powermanagement.PowerManagement",
+        "clobbers": [
+            "window.plugins.powerManagement"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.console/www/console-via-logger.js",
         "id": "org.apache.cordova.console.console",
         "clobbers": [
@@ -82,6 +89,7 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "com.ionic.keyboard": "1.0.2",
+    "com.simplec.plugins.powermanagement": "0.4.0",
     "org.apache.cordova.console": "0.2.10",
     "org.apache.cordova.device": "0.2.11",
     "org.apache.cordova.device-orientation": "0.3.8",
