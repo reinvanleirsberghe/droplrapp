@@ -7514,6 +7514,11 @@ a.button {
     .compass h4 span {
       display: block;
       color: #fb435f; }
+  .compass #drop-degrees {
+    margin: auto;
+    color: #fb435f;
+    font-size: 18px;
+    text-align: center; }
   .compass #drop-compass {
     margin: auto;
     position: relative;
@@ -7529,7 +7534,7 @@ a.button {
   .compass .drop-progress {
     margin: auto;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     position: relative;
     width: 170px;
     height: 170px;

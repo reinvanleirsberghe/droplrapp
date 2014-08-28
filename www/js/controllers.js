@@ -1,15 +1,19 @@
 angular.module('starter.controllers', [])
 
     .controller('AppCtrl', function ($scope, $ionicModal, $timeout) {
-        // allow device to sleep
-        window.plugins.powerManagement.release();
+        $scope.$apply(function () {
+            // allow device to sleep
+            window.plugins.powerManagement.release();
+        });
     })
 
     .controller('DropsCtrl', function ($scope, $ionicLoading, Drops) {
-        // allow device to sleep
-        window.plugins.powerManagement.release();
+        $scope.$apply(function () {
+            // allow device to sleep
+            window.plugins.powerManagement.release();
 
-        $scope.drops = {};
+            $scope.drops = {};
+        });
 
         // show loading
         $ionicLoading.show({
@@ -27,10 +31,12 @@ angular.module('starter.controllers', [])
     })
 
     .controller('DropCtrl', function ($scope, $ionicLoading, $stateParams, Drops) {
-        // allow device to sleep
-        window.plugins.powerManagement.release();
+        $scope.$apply(function () {
+            // allow device to sleep
+            window.plugins.powerManagement.release();
 
-        $scope.drop = {};
+            $scope.drop = {};
+        });
 
         // show loading
         $ionicLoading.show({
@@ -49,18 +55,20 @@ angular.module('starter.controllers', [])
     })
 
     .controller('GoCtrl', function ($scope, $ionicLoading, $stateParams, Drops) {
-        // prevent device from sleeping
-        window.plugins.powerManagement.acquire();
+        $scope.$apply(function () {
+            // prevent device from sleeping
+            window.plugins.powerManagement.acquire();
 
-        $scope.drop = {};
-        $scope.distance = null;
-        $scope.degrees = null;
+            localStorage.removeItem("lastMarker");
+            localStorage.removeItem("firstLat");
+            localStorage.removeItem("firstLng");
 
-        localStorage.removeItem("lastMarker");
-        localStorage.removeItem("firstLat");
-        localStorage.removeItem("firstLng");
+            $scope.drop = {};
+            $scope.distance = null;
+            $scope.degrees = null;
 
-        var markers = {};
+            var markers = {};
+        });
 
         // show loading
         $ionicLoading.show({
@@ -87,7 +95,7 @@ angular.module('starter.controllers', [])
 
 //            // check orientation
             var optionsCompass = {
-                frequency: 200
+                frequency: 0.1
             };
             navigator.compass.watchHeading(onSuccessCompass, onErrorCompass, optionsCompass);
 
@@ -203,7 +211,8 @@ angular.module('starter.controllers', [])
          * @param heading
          */
         function onSuccessCompass(heading) {
-            var degrees = heading.magneticHeading + 90;
+            var degreesNorth = heading.magneticHeading;
+            var degrees = degreesNorth + 90;
             if (degrees > 360) {
                 degrees = degrees - 360;
             }
@@ -215,7 +224,7 @@ angular.module('starter.controllers', [])
             }
 
             $scope.$apply(function () {
-                $scope.degrees = degreesCompass;
+                $scope.degrees = 'N: ' + roundDistance(degreesNorth) + '&deg;';
                 $scope.compass = {
                     '-moz-transform':'rotate(-' + degreesCompass + 'deg)',
                     '-webkit-transform':'rotate(-' + degreesCompass + 'deg)',
