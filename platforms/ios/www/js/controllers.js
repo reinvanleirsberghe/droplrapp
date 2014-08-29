@@ -205,24 +205,18 @@ angular.module('starter.controllers', [])
         function onSuccessCompass(heading) {
             var degreesNorth = heading.magneticHeading;
             var degrees = degreesNorth + 90;
-            if (degrees > 360) {
-                degrees = degrees - 360;
-            }
-
             var bearing = getBearingFromLatLon(currentLat, currentLng, nextLat, nextLng);
             var degreesCompass = Math.round(toInteger(degrees + bearing));
-            if (degreesCompass > 360) {
-                degreesCompass = degreesCompass - 360;
-            }
 
             $scope.$apply(function () {
                 $scope.degrees = 'N: ' + Math.round(degreesNorth) + '&deg;';
                 $scope.compass = {
-                    '-moz-transform':'rotate(-' + degreesCompass + 'deg)',
-                    '-webkit-transform':'rotate(-' + degreesCompass + 'deg)',
-                    '-o-transform':'rotate(-' + degreesCompass + 'deg)',
-                    '-ms-transform':'rotate(-' + degreesCompass + 'deg)',
-                    'transform':'rotate(-' + degreesCompass + 'deg)'
+
+                    '-moz-transform':'rotate(' + degreesCompass + 'deg)',
+                    '-webkit-transform':'rotate(' + degreesCompass + 'deg)',
+                    '-o-transform':'rotate(' + degreesCompass + 'deg)',
+                    '-ms-transform':'rotate(' + degreesCompass + 'deg)',
+                    'transform':'rotate(' + degreesCompass + 'deg)'
                 };
             });
         }
