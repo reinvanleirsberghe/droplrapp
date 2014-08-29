@@ -1,17 +1,9 @@
 angular.module('starter.controllers', [])
 
-    .controller('AppCtrl', function ($scope, $ionicModal, $timeout) {
-        $scope.$apply(function () {
-            // allow device to sleep
-            window.plugins.powerManagement.release();
-        });
-    })
+    .controller('AppCtrl', function ($scope, $ionicModal, $timeout) { })
 
     .controller('DropsCtrl', function ($scope, $ionicLoading, Drops) {
         $scope.$apply(function () {
-            // allow device to sleep
-            window.plugins.powerManagement.release();
-
             $scope.drops = {};
         });
 
@@ -31,10 +23,10 @@ angular.module('starter.controllers', [])
     })
 
     .controller('DropCtrl', function ($scope, $ionicLoading, $stateParams, Drops) {
-        $scope.$apply(function () {
-            // allow device to sleep
-            window.plugins.powerManagement.release();
+        // allow device to sleep
+        window.plugins.powerManagement.release();
 
+        $scope.$apply(function () {
             $scope.drop = {};
         });
 
@@ -55,10 +47,10 @@ angular.module('starter.controllers', [])
     })
 
     .controller('GoCtrl', function ($scope, $ionicLoading, $stateParams, Drops) {
-        $scope.$apply(function () {
-            // prevent device from sleeping
-            window.plugins.powerManagement.acquire();
+        // prevent device from sleeping
+        window.plugins.powerManagement.acquire();
 
+        $scope.$apply(function () {
             localStorage.removeItem("lastMarker");
             localStorage.removeItem("firstLat");
             localStorage.removeItem("firstLng");
@@ -95,7 +87,7 @@ angular.module('starter.controllers', [])
 
 //            // check orientation
             var optionsCompass = {
-                frequency: 0.1
+                frequency: 50
             };
             navigator.compass.watchHeading(onSuccessCompass, onErrorCompass, optionsCompass);
 
@@ -218,14 +210,15 @@ angular.module('starter.controllers', [])
             }
 
             var bearing = getBearingFromLatLon(currentLat, currentLng, nextLat, nextLng);
-            var degreesCompass = toInteger(degrees + bearing);
+            var degreesCompass = Math.round(toInteger(degrees + bearing));
             if (degreesCompass > 360) {
                 degreesCompass = degreesCompass - 360;
             }
 
             $scope.$apply(function () {
-                $scope.degrees = 'N: ' + roundDistance(degreesNorth) + '&deg;';
+                $scope.degrees = 'N: ' + Math.round(degreesNorth) + '&deg;';
                 $scope.compass = {
+
                     '-moz-transform':'rotate(-' + degreesCompass + 'deg)',
                     '-webkit-transform':'rotate(-' + degreesCompass + 'deg)',
                     '-o-transform':'rotate(-' + degreesCompass + 'deg)',

@@ -31,19 +31,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="compass.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="compass.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/compass.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="28" selection-start="635" selection-end="635" vertical-scroll-proportion="0.6902985" vertical-offset="15" max-vertical-offset="6675">
+            <state line="33" column="28" selection-start="548" selection-end="548" vertical-scroll-proportion="-6.734694" vertical-offset="165" max-vertical-offset="6675">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="230" column="72" selection-start="8641" selection-end="8641" vertical-scroll-proportion="-20.192308" vertical-offset="2925" max-vertical-offset="3945">
+            <state line="249" column="7" selection-start="9163" selection-end="9163" vertical-scroll-proportion="0.91071427" vertical-offset="2817" max-vertical-offset="3840">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/functions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="23" selection-start="2087" selection-end="2098" vertical-scroll-proportion="0.0" vertical-offset="657" max-vertical-offset="1500">
               <folding />
             </state>
           </provider>
@@ -63,7 +72,6 @@
         <option value="$PROJECT_DIR$/www/templates/menu.html" />
         <option value="$PROJECT_DIR$/www/templates/drops.html" />
         <option value="$PROJECT_DIR$/www/js/app.js" />
-        <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/scss/drops.scss" />
         <option value="$PROJECT_DIR$/www/templates/drop.html" />
         <option value="$PROJECT_DIR$/www/js/filters.js" />
@@ -79,8 +87,9 @@
         <option value="$PROJECT_DIR$/www/config.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/www/templates/go.html" />
-        <option value="$PROJECT_DIR$/www/js/controllers.js" />
+        <option value="$PROJECT_DIR$/www/js/functions.js" />
         <option value="$PROJECT_DIR$/scss/compass.scss" />
+        <option value="$PROJECT_DIR$/www/js/controllers.js" />
       </list>
     </option>
   </component>
@@ -88,8 +97,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="1680" />
     <option name="y" value="22" />
-    <option name="width" value="1903" />
-    <option name="height" value="878" />
+    <option name="width" value="1920" />
+    <option name="height" value="1058" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -177,6 +186,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="droplrapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="droplrapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="scss" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -227,7 +254,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1680" y="22" width="1903" height="878" extended-state="0" />
+    <frame x="1680" y="22" width="1920" height="1058" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -236,7 +263,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22700998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.315625" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -449,11 +476,6 @@
         <state line="27" column="0" selection-start="723" selection-end="723" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/drop.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="47" selection-start="455" selection-end="488" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405" />
@@ -538,9 +560,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
+    <entry file="file://$PROJECT_DIR$/www/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="72" selection-start="8641" selection-end="8641" vertical-scroll-proportion="-20.192308" vertical-offset="2925" max-vertical-offset="3945">
+        <state line="81" column="23" selection-start="2087" selection-end="2098" vertical-scroll-proportion="0.0" vertical-offset="657" max-vertical-offset="1500">
           <folding />
         </state>
       </provider>
@@ -554,7 +576,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/compass.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="28" selection-start="635" selection-end="635" vertical-scroll-proportion="0.6902985" vertical-offset="15" max-vertical-offset="6675">
+        <state line="33" column="28" selection-start="548" selection-end="548" vertical-scroll-proportion="-6.734694" vertical-offset="165" max-vertical-offset="6675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="249" column="7" selection-start="9163" selection-end="9163" vertical-scroll-proportion="0.91071427" vertical-offset="2817" max-vertical-offset="3840">
           <folding />
         </state>
       </provider>
