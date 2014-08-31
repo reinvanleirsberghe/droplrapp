@@ -87,7 +87,7 @@ angular.module('starter.controllers', [])
 
 //            // check orientation
             var optionsCompass = {
-                frequency: 50
+                frequency: 0.05
             };
             navigator.compass.watchHeading(onSuccessCompass, onErrorCompass, optionsCompass);
 
@@ -209,14 +209,14 @@ angular.module('starter.controllers', [])
             var degreesCompass = Math.round(toInteger(degrees + bearing));
 
             $scope.$apply(function () {
-                $scope.degrees = 'N: ' + Math.round(degreesNorth) + '&deg;';
+                $scope.degrees = 'N: ' + Math.round(degreesCompass) + '&deg;';
                 $scope.compass = {
 
-                    '-moz-transform':'rotate(' + degreesCompass + 'deg)',
-                    '-webkit-transform':'rotate(' + degreesCompass + 'deg)',
-                    '-o-transform':'rotate(' + degreesCompass + 'deg)',
-                    '-ms-transform':'rotate(' + degreesCompass + 'deg)',
-                    'transform':'rotate(' + degreesCompass + 'deg)'
+                    '-moz-transform':'rotate(-' + degreesCompass + 'deg)',
+                    '-webkit-transform':'rotate(-' + degreesCompass + 'deg)',
+                    '-o-transform':'rotate(-' + degreesCompass + 'deg)',
+                    '-ms-transform':'rotate(-' + degreesCompass + 'deg)',
+                    'transform':'rotate(-' + degreesCompass + 'deg)'
                 };
             });
         }
