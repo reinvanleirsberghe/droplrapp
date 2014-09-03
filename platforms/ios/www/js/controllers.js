@@ -3,9 +3,7 @@ angular.module('starter.controllers', [])
     .controller('AppCtrl', function ($scope, $ionicModal, $timeout) { })
 
     .controller('DropsCtrl', function ($scope, $ionicLoading, Drops) {
-        $scope.$apply(function () {
-            $scope.drops = {};
-        });
+        $scope.drops = {};
 
         // show loading
         $ionicLoading.show({
@@ -26,9 +24,7 @@ angular.module('starter.controllers', [])
         // allow device to sleep
         window.plugins.powerManagement.release();
 
-        $scope.$apply(function () {
-            $scope.drop = {};
-        });
+        $scope.drop = {};
 
         // show loading
         $ionicLoading.show({
@@ -46,21 +42,34 @@ angular.module('starter.controllers', [])
         });
     })
 
-    .controller('GoCtrl', function ($scope, $ionicLoading, $stateParams, Drops) {
+    .controller('GoCtrl', function ($scope, $ionicLoading, $ionicModal, $stateParams, Drops) {
         // prevent device from sleeping
         window.plugins.powerManagement.acquire();
 
-        $scope.$apply(function () {
-            localStorage.removeItem("lastMarker");
-            localStorage.removeItem("firstLat");
-            localStorage.removeItem("firstLng");
+        localStorage.removeItem("lastMarker");
+        localStorage.removeItem("firstLat");
+        localStorage.removeItem("firstLng");
 
-            $scope.drop = {};
-            $scope.distance = null;
-            $scope.degrees = null;
+        $scope.drop = {};
+        $scope.distance = null;
+        $scope.degrees = null;
 
-            var markers = {};
+        var markers = {};
+
+        // Create the modal that we will use later
+        $ionicModal.fromTemplateUrl('templates/modal/description.html', function($ionicModal) {
+            $scope.modal = $ionicModal;
+        }, {
+            // Use our scope for the scope of the modal to keep it simple
+            scope: $scope,
+            // The animation we want to use for the modal entrance
+            animation: 'slide-in-up'
         });
+
+        // Triggered in the modal to close it
+        $scope.closeModal = function() {
+            $scope.modal.hide();
+        };
 
         // show loading
         $ionicLoading.show({
@@ -85,24 +94,11 @@ angular.module('starter.controllers', [])
                 navigator.geolocation.getCurrentPosition(onSuccessGeo, onErrorGeo);
             }, 1500);
 
-//            // check orientation
+            // check orientation
             var optionsCompass = {
                 frequency: 0.05
             };
             navigator.compass.watchHeading(onSuccessCompass, onErrorCompass, optionsCompass);
-
-            // simulate compass
-//            setInterval(function () {
-//                var degrees = randomFromTo(0 , 360);
-//                $scope.$apply(function () {
-//                    $scope.compass = {
-//                    '-moz-transform':'rotate(-' + degrees + 'deg)',
-//                    '-o-transform':'rotate(-' + degrees + 'deg)',
-//                    '-ms-transform':'rotate(-' + degrees + 'deg)',
-//                    'transform':'rotate(-' + degrees + 'deg)'
-//                    };
-//                });
-//            }, 500);
 
             $ionicLoading.hide();
         });
@@ -121,6 +117,8 @@ angular.module('starter.controllers', [])
             var percentDistance = 0;
             var amountMarkers = markers.length;
             var nextMarker = "";
+            var description = "";
+            var video = "";
             currentLat = position.coords.latitude;
             currentLng = position.coords.longitude;
 
@@ -141,6 +139,8 @@ angular.module('starter.controllers', [])
                 nextLat = markers[0].lat;
                 nextLng = markers[0].lng;
                 nextMarker =  markers[0].name;
+                description = markers[0].description;
+                video = markers[0].video;
 
                 totalDistance = roundDistance(getDistanceFromLatLonInKm(firstLat, firstLng, nextLat, nextLng));
             }
@@ -150,6 +150,8 @@ angular.module('starter.controllers', [])
                 prevLat = markers[lastMarker-1].lat;
                 prevLng = markers[lastMarker-1].lng;
                 nextMarker =  markers[lastMarker].name;
+                description = markers[lastMarker].description;
+                video = markers[lastMarker].video;
 
                 totalDistance = roundDistance(getDistanceFromLatLonInKm(prevLat, prevLng, nextLat, nextLng));
             }
@@ -186,6 +188,12 @@ angular.module('starter.controllers', [])
             });
 
             if (distance < 0.05) {
+                // show modal
+                $scope.name = "test";
+                $scope.description = description;
+                $scope.video = video;
+                $scope.modal.show();
+
                 lastMarker++;
                 if (lastMarker < amountMarkers) {
                     localStorage.setItem("lastMarker", lastMarker);
@@ -209,7 +217,7 @@ angular.module('starter.controllers', [])
             var degreesCompass = Math.round(toInteger(degrees + bearing));
 
             $scope.$apply(function () {
-                $scope.degrees = 'N: ' + Math.round(degreesCompass) + '&deg;';
+                $scope.degrees = 'N: ' + Math.round(degreesNorth) + '&deg;';
                 $scope.compass = {
 
                     '-moz-transform':'rotate(-' + degreesCompass + 'deg)',
